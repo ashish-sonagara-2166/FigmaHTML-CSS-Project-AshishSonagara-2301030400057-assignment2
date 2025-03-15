@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Setting</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-image: url("images.jpg");
+            background-size: 20%;
+            color: white;
+            /* text-align: center; */
+        }
+        #main{
+            height: 400px;
+            width: 100%;
+        }
+        #font {
+            position: relative;
+            top: 40%;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+        }
+        #font img {
+            position: absolute;
+            top: 16%;
+            left: 650px;
+            height: 40px;
+            width: 40px;
+        }
+        #trans_div {
+            position: relative;
+            top: 44%;
+            left: 36%;
+            background-color: aliceblue;
+            opacity: 0.6;
+            height: 280px;
+            width: 400px;
+            border-radius: 10px;
+        }
+        #music {
+            position: absolute;
+            top: 10%;
+            left: 35%;
+            height: 30px;
+            width: 200px;
+        }
+         #speaker {
+            position: absolute;
+            top: 30%;
+            left: 35%;
+            height: 30px;
+            width: 200px;
+        }
+        #mic {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            height: 30px;
+            width: 200px;
+        }
+        label { 
+            color: black;
+            position: relative;
+            left: 28px;
+        }
+        #mus_range {
+            top: 12%;
+        }
+        #speaker_range {
+            top: 18%;
+        }
+        #mic_range {
+            top: 25%;
+        }
+        a {
+            position: absolute;
+            top: 75%;
+            left: 45%;
+            display: block;
+            text-decoration: none;
+            height: 25px;
+            width: 110px;
+            text-align: center;
+            padding: 20px 10px;
+            background-color:ghostwhite;
+            border-radius: 30px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="font">
+            <img src="setting_svg.png" alt="setting svg">
+            <p>Settings</p>
+        </div>
+        <div id="trans_div">
+            <label for="music" id="mus_range">Music Sound :</label>
+            <input type="range" id="music" name="music" min="0" max="100"> <br><br>
+            <label for="speaker" id="speaker_range">Speaker Sound :</label>
+            <input type="range" id="speaker" name="music" min="0" max="100"><br><br>
+            <label for="mic" id="mic_range">Mic Sound :</label>
+            <input type="range" id="mic" name="music" min="0" max="100"><br><br>
+        </div>
+        <div>
+            <a href="escape.html">Back To Menu</a>
+        </div>
+    </div>
+</body>
+</html>

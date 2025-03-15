@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 2</title>
+    <style>
+        body {
+            background-color: rgb(156, 221, 132);
+            text-align: center;
+        }
+        #main {
+            position: relative;
+            top: 20px;
+            left: 470px;
+            /* display: none; */
+            height: 500px;
+            width: 600px;
+            background-color: rgb(202, 241, 241);
+            border-radius: 20px;
+            padding: 15px;
+        }
+        #password {
+            position: relative;
+            top: 140px;
+            display: flex;
+            justify-content: space-around;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #suitacse {
+            position: absolute;
+            top: 200px;
+            left: 70px;
+        }
+        #hint {
+            height: 38px;
+            width: 76px;
+            border: 2px solid;
+            border-radius: 18px;
+            background-color: rgb(34, 198, 34)
+        }
+        #hint:hover {
+            height: 45px;
+            width: 85px;
+            border: 3px solid;
+            border-radius: 18px;
+            background-color: rgb(150, 249, 150)
+        }
+        .hint_button {
+            position: relative;
+            top: 20px;
+        }
+        #submit {
+            height: 40px;
+            width: 80px;
+            border: 2px solid;
+            border-radius: 18px;
+            background-color: rgb(34, 198, 34)
+        }
+        #submit:hover {
+            height: 45px;
+            width: 85px;
+            border: 3px solid;
+            border-radius: 18px;
+            background-color: rgb(150, 249, 150)
+        }
+        .button {
+            position: fixed;
+            top: 552px;
+            left: 752px;
+        }
+        #hidden {
+            position: absolute;
+            top: 230px;
+            left: 50px;
+            display: none;
+            height: 170px;
+            width: 500px;
+            background-color: rgb(181, 211, 185);
+            padding:0px 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="suitacse">
+        <img src="suitcase.png" alt="suitcase">
+    </div>
+    <h2>Lock Combination</h2>
+    <div id="main">
+        <div id="hidden">
+            <p style="text-align: start;">Hint:-
+                <ul>
+                    <li style="text-align: start;">First number hint: Think about spelling the word slowly and counting each letter.
+                    </li>
+                    <li style="text-align: start;">Second number hint: How many items are in half a dozen? Now multiply that number by
+                        itself.</li>
+                    <li style="text-align: start;">Third number hint: A triangle is a shape — how many sides does one triangle have?
+                        What about two triangles?</li>
+                </ul>
+            </p>
+            
+        </div>
+        <h1 style="font-size: 25px; color: black;">Enter a lock combination of number from 0 to 9 </h1>
+        <div>
+            <p style="text-align: start; font-size: 20px;">Crack the 3-number code:
+                <ul>
+                    <li style="text-align: start;font-size: 20px;">The first number is the number of letters in the word ‘escape.’</li><br>
+                    <li style="text-align: start;font-size: 20px;">The second number is half of a dozen, multiplied by itself.</li><br>
+                    <li style="text-align: start;font-size: 20px;">The third number is the number of sides on two triangles combined."</li><br></br>
+                </ul>
+            </p>
+        </div>
+        <div id="password">
+            <div>
+                <label for="number_1">Number 1: </label>
+                <input type="text" id="number_1" name="number_1" style="height: 20px; width: 20px;">
+            </div>
+           <div>
+                <label for="number_2">Number 2: </label>
+                <input type="text" id="number_2" name="number_2" style="height: 20px; width: 20px;">
+           </div>
+            <div>
+                <label for="number_3">Number 3: </label>
+                <input type="text" id="number_3" name="number_3" style="height: 20px; width: 20px;">
+            </div>
+        </div>
+        <div class="hint_button">
+            <button id="hint">Hint</button>
+        </div>
+        <script>
+            document.getElementsByClassName("hint")[0];
+            hint.onclick = function() {
+                document.getElementById("hidden").style.display = "inline";
+                hint.style.display = "none";
+            } 
+            
+            // document.getElementsByClassName("hint")[0];
+            // hint.onclick = function () {
+            //     document.getElementsByClassName("hint")[0].style.display = "none";
+            // }
+        </script>
+        <div class="button">
+            <button id="submit">Submit</button>
+        </div>
+        <script>
+            document.getElementById("submit");
+            var answer = "696";
+            submit.onclick = function() {
+                var user_answer1 = document.getElementById("number_1").value;
+                var user_answer2 = document.getElementById("number_2").value;
+                var user_answer3 = document.getElementById("number_3").value;
+                var user_answer = user_answer1 + user_answer2 + user_answer3;
+                if (answer == user_answer) {
+                    window.location.href = 'room.html';
+                }
+                else {
+                    alert("enter correct lock combination");
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

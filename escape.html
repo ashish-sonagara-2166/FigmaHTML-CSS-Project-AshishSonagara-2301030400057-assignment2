@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+    <Style>
+        * {
+            margin:0px;
+            padding:0px;
+        }
+        body {
+            background-image: url("images.jpg");
+            background-size: 20%;
+            background-color: #160650;
+            font-family: "Courier New", monospace;
+            font-size: 32px;
+            color: aliceblue;
+            /* font-weight: 100; */
+        }
+        #main_div {
+            position: relative;
+        }
+        #div1 {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center; 
+        }
+        #div3 {
+            position: absolute;
+        }
+        .design {
+            height: 80px;
+            width: 190px;
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid;
+            border-radius: 40px;
+            font-size: 28px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .design:hover {
+            height: 82px;
+            width: 192px;
+            background-color: burlywood;
+            border: 2px white dashed;
+        }
+    </Style>
+</head>
+<body>
+    <div id="main_div">
+        <div id="div1">
+            <h2 style="margin: 15px;">Virtual Escape room</h2>
+            <button id="button1" class="design" style="font-size: 28px;" onclick="window.location.href='room.html'">Start Game</button>
+            <button id="button2" class="design" onclick="window.location.href='setting.html'">Settings</button>
+            <button id="button3" class="design" onclick="window.location.href='index.html'">Exit !!</button>
+        </div>
+        <br>
+        <img src="agree-4.png" alt="agree" style="height: 30px; width: 30px; position: absolute; top: 482px; left: 10px">
+        <p style="font-size: 28px; margin: 0px 50px;">agreed for terms and condition to enter the escape room...</p> <br>
+        <p style="font-size: 28px; margin: 0px 50px;">This Virtualesape room was created by Ashish and this page contains different objects and
+            game through which one can escape the room so play it and enjoy this game and lastly this game was just created to
+            have fun and was a project of mine!!</p>
+        <div id="div3">
+            <img src="agree-3.svg" alt="svg_agree">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front page</title>
+    <link href='https://fonts.googleapis.com/css?family=Zeyada' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #160650;
+            text-align: center;
+            color: antiquewhite;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+        }
+        #head {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 50px;
+        }
+        #div1 {
+            position: relative;
+        } 
+        /* .images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        } */
+        .images img {
+            z-index: 1;
+         }
+        #img1 {
+            position: absolute;
+            top: -36px;
+            left: 570px;
+        }
+        #img2 {
+            position: absolute;
+            height: 320px;
+            top: -190px;
+            left: 690px;
+        }
+        #img3 {
+            position: absolute;
+            height: 350px;
+            top: 160px;
+            left: 660px;
+        }
+        #button1 {
+            /* font-family:Arial, Helvetica, sans-serif; */
+            position: relative;
+            z-index: 1000;
+            text-decoration: none;
+            border: 3px solid white;
+            display: block;
+            margin: 0px 44%;
+            height: 40px;
+            width: 160px;
+            font-size: 26px;
+            color: black;
+            background-color: azure;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="margin:50px 50px 110px 50px;">Click on Enter to enter...</h2>
+    <div id="div1">
+        <h1 id="head">
+            <span>Virtual</span>
+            <span>Escape</span>
+            <span>Room</span>
+        </h1>
+        <a  href="escape.html" id="button1" target="_blank" style="font-family: 'Courier New', Courier, monospace; font-size: 18px;">Enter With Guts</a>
+        <div class="images">
+            <img id="img1" src="vector1.svg">
+        </div>
+        <div class="images">
+            <img id="img2" src="vector2.svg">
+        </div>
+        <div class="images">
+            <img id="img3" src="vector3.svg">
+        </div>
+    </div>
+</body>
+</html>
